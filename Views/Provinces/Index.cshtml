@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Province</h1>
+<h1>Provinces</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,15 +13,15 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().ProvinceCode)
+                @Html.DisplayNameFor(model => model.ProvinceCode)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FirstOrDefault().ProvinceName)
+                @Html.DisplayNameFor(model => model.ProvinceName)
             </th>
             <th>
                 Cities
             </th>
-            <th></th>
+            <th></th>         
         </tr>
     </thead>
     <tbody>
@@ -34,7 +34,7 @@
                 @Html.DisplayFor(modelItem => province.ProvinceName)
             </td>
             <td>
-                @String.Join(", ", province.Cities.Select(c => c.CityName))
+                 @String.Join(", ", province.Cities.Select(c => c.CityName))
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@province.ProvinceCode">Edit</a> |

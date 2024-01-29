@@ -32,6 +32,7 @@ public class Province
     [MaxLength(100)]
     public required string ProvinceName { get; set; }
     
+     
     // Navigation property to represent the one-to-many relationship
      public ICollection<City> Cities { get; set; }
 
